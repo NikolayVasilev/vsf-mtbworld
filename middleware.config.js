@@ -28,9 +28,13 @@ module.exports = {
         currency: 'USD',
         country: 'US',
         languageMap: {
-          en: ['en', 'de'],
-          de: ['de', 'en']
-        }
+          en: ['en', 'en'],
+          de: ['de', 'de']
+        },
+        acceptLanguage: [
+          'en',
+          'de'
+        ]
       },
       customQueries: ctCustomQueries
     }

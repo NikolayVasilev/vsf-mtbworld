@@ -128,13 +128,7 @@ export default {
           pageOptions: [20, 50, 100],
           subcategoriesLimit: 100,
           availableFacets: [
-            {
-              facet: 'categories.id',
-              type: 'string',
-              option: 'subtree("*")',
-              name: 'category',
-              filteringStrategy: 'query'
-            },
+            { facet: 'categories.id', type: 'string', option: 'subtree("*")', name: 'category', filteringStrategy: 'query' }, // Don't change the "name" of this facet
             {
               facet: 'variants.availability.isOnStockInChannels',
               type: 'string',
@@ -142,18 +136,9 @@ export default {
               name: 'availability',
               filteringStrategy: 'query'
             },
-            {
-              facet: 'variants.attributes.size',
-              type: 'string',
-              option: '',
-              name: 'size'
-            },
-            {
-              facet: 'variants.attributes.color.key',
-              type: 'string',
-              option: '',
-              name: 'color'
-            }
+            { facet: 'variants.attributes.size', type: 'string', option: '', name: 'size', filteringStrategy: ['filter','facets'], countingProducts: true },
+            { facet: 'variants.attributes.color.key', type: 'string', option: '', name: 'color', filteringStrategy: ['filter','facets'] }
+        
           ],
           sortingOptions: [
             {
